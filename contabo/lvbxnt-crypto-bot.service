@@ -1,0 +1,14 @@
+[Unit]
+Description=LVBXNT Crypto Bot V25
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/lvbxnt_crypto_bot
+EnvironmentFile=/opt/lvbxnt_crypto_bot/.env
+ExecStart=/opt/lvbxnt_crypto_bot/venv/bin/python app.py
+Restart=always
+RestartSec=5
+User=root
+
+[Install]
+WantedBy=multi-user.target
